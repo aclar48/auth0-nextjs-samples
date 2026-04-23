@@ -22,7 +22,7 @@ describe('NavBar', () => {
   it('should render in logged in state', async () => {
     render(<NavBar />, { wrapper: withAuth0Provider({ user: mockUser }) });
 
-    expect(screen.getByTestId('navbar-items').children).toHaveLength(4);
+    await waitFor(() => expect(screen.getByTestId('navbar-items').children).toHaveLength(4));
     expect(screen.getByTestId('navbar-home')).toBeInTheDocument();
     expect(screen.getByTestId('navbar-csr')).toBeInTheDocument();
     expect(screen.getByTestId('navbar-ssr')).toBeInTheDocument();

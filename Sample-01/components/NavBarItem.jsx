@@ -10,7 +10,6 @@ const NavBarItem = ({ children, href, className, icon, tabIndex, testId }) => {
   const pathname = usePathname();
   const activeClass = 'navbar-item-active';
   const activeClasses = className ? `${className} ${activeClass}` : activeClass;
-  console.log(icon)
   return (
     <span className="d-inline-flex align-items-center navbar-item">
       {icon && icon.length > 0 && <FontAwesomeIcon icon={`fa-solid fa-${icon}`} className="mr-3" />}
