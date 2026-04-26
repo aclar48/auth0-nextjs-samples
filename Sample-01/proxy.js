@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { auth0 } from "./lib/auth0"
 
-export async function middleware(request) {
+export async function proxy(request) {
     const authRes = await auth0.middleware(request);
 
     // authentication routes — let the middleware handle it
